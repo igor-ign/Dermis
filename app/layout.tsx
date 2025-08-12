@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -13,10 +13,9 @@ export const metadata: Metadata = {
     "A melhor forma de acompanhar a evolução do tratamento de feridas do seu cliente",
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  display: "swap",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export default function RootLayout({
@@ -25,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>{children}</body>
+    <html lang="pt" suppressHydrationWarning className={inter.variable}>
+      <body>{children}</body>
     </html>
   );
 }

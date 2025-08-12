@@ -1,5 +1,11 @@
-import Link from "next/link";
+import LandingPageHeader from "@/components/LandingPageHeader/LandingPageHeader";
+
+export const dynamic = "force-static";
 
 export default function Home() {
-  return <main>homepage</main>;
+  return (
+    <main>
+      <LandingPageHeader />
+    </main>
+  );
 }
