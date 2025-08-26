@@ -4,7 +4,7 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 export default function LandingPageHeader() {
   return (
-    <header className="bg-background p-4 border-b-[2px]">
+    <header className="bg-background p-4 border-b-[2px] sticky">
       <Container>
         <div className="flex justify-between items-center">
           <h1 className="text-primary font-bold text-2xl">

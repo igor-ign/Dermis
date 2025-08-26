@@ -2,6 +2,8 @@ import Container from "@/components/Container/Container";
 import LandingPageHeader from "@/components/LandingPageHeader/LandingPageHeader";
 import Image from "next/image";
 import DermisGenericImage from "../lib/assets/dermis-generic.webp";
+import { CameraIcon, BarChartIcon, PersonIcon } from "@radix-ui/react-icons";
+import LandingPageFeatureCard from "@/components/LandingPageFeatureCard/LandingPageFeatureCard";
 
 export const dynamic = "force-static";
 
@@ -67,6 +69,40 @@ export default function Home() {
               />
             </div>
           </div>
+        </Container>
+      </section>
+
+      <section aria-labelledby="features-section" className="my-28">
+        <Container>
+          <h2
+            id="features-section"
+            className="text-4xl font-bold text-black text-center mb-4 smartphone:text-3xl"
+          >
+            Tudo o que você precisa para o gerenciamento do cuidado com seus
+            pacientes.
+          </h2>
+          <p className="text-grey text-xl text-center mt-2 smartphone:text-lg">
+            Otimize seu fluxo de trabalho com nosso conjunto completo de
+            ferramentas desenvolvidas especialmente para profissionais da saúde.
+          </p>
+
+          <ul className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-16 mt-16 text-black">
+            <LandingPageFeatureCard
+              title="Registro visual"
+              paragraph="Documente e acompanhe a evolução do tratamento com registros visuais de alta qualidade."
+              Icon={CameraIcon}
+            />
+            <LandingPageFeatureCard
+              title="Monitoramento de progresso"
+              paragraph="Acompanhe de forma centralizada a evolução do tratamento de seus pacientes."
+              Icon={BarChartIcon}
+            />
+            <LandingPageFeatureCard
+              title="Gestão de pacientes"
+              paragraph="Todas as informações dos seus pacientes organizadas em um só lugar."
+              Icon={PersonIcon}
+            />
+          </ul>
         </Container>
       </section>
     </main>
